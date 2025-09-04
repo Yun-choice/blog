@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/Yun-choice/blog",
-      My Portfolio: "https://yun-choice.github.io/DataAnalysis/data_analyst_intro_test",
+      "My Portfolio": "https://yun-choice.github.io/DataAnalysis/data_analyst_intro_test",
     },
   }),
 }
