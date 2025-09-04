@@ -1,5 +1,5 @@
 ---
-title: 🌻YoonTech Blog
+title: 🌻Yun-choice Blog
 ---
 
 ## 안녕하세요
