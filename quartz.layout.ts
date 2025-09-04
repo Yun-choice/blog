@@ -1,6 +1,5 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -8,12 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/chereny/chereny.github.io",
+      Blog: "https://chereny.github.io",
     },
   }),
 }
-
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -38,16 +36,62 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    // 탐색기 개선 옵션들
+    Component.Explorer({
+      title: "Categories",
+      folderClickBehavior: "collapse", // 폴더 클릭 시 접기/펼치기
+      folderDefaultState: "collapsed", // 기본적으로 폴더 접혀있음
+      useSavedState: true, // 사용자의 폴더 상태 기억
+      mapFn: (node) => {
+        // 파일명에서 날짜 제거하고 카테고리별 그룹핑
+        if (node.file) {
+          node.displayName = node.file.frontmatter?.title || node.displayName
+        }
+        return node
+      },
+      filterFn: (node) => {
+        // draft 파일들 숨기기
+        if (node.file?.frontmatter?.draft) return false
+        return true
+      },
+      order: ["filter", "map", "sort"] // 정렬 순서
+    }),
   ],
   right: [
     Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    // 목차 개선
+    Component.DesktopOnly(
+      Component.TableOfContents({
+        maxDepth: 4, // 최대 4단계까지
+        minEntries: 1, // 최소 1개 항목부터 표시
+        showByDefault: true, // 기본적으로 표시
+        collapseByDefault: false // 기본적으로 펼쳐진 상태
+      })
+    ),
     Component.Backlinks(),
   ],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.Comments({
+        provider: "giscus",
+        options: {
+          repo: "Yun-choice/blog",
+          repoId: "R_kgDOPpecrQ",                    
+          category: "General",
+          categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
+          mapping: "pathname",
+          strict: false,
+          reactionsEnabled: true,
+          inputPosition: "top",                               
+	  lang: "ko",
+          lightTheme: "noborder_light",              
+          darkTheme: "noborder_dark"          }
+      }),
+      condition: (page) => page.fileData.slug !== "index",
+    })
+  ],
 }
-
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -62,23 +106,12 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "Categories",
+      folderClickBehavior: "collapse",
+      folderDefaultState: "collapsed",
+      useSavedState: true,
+    }),
   ],
   right: [],
 }
-
-<script src="https://giscus.app/client.js"
-        data-repo="Yun-choice/blog"
-        data-repo-id="R_kgDOPpecrQ"
-        data-category="General"
-        data-category-id="DIC_kwDOPpecrc4Cu8Rp"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="noborder_light"
-        data-lang="ko"
-        crossorigin="anonymous"
-        async>
-</script>
