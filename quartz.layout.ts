@@ -66,3 +66,19 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
+
+<script src="https://giscus.app/client.js"
+        data-repo="Yun-choice/blog"
+        data-repo-id="R_kgDOPpecrQ"
+        data-category="General"
+        data-category-id="DIC_kwDOPpecrc4Cu8Rp"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="noborder_light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>

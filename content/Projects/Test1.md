@@ -1,3 +1,3 @@
 ## Hello World!!
 - hi
-[[index | 대문]]
+- [[index | 대문]]
