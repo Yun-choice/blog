@@ -18,7 +18,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
       tagId: "G-YEZS193RDP",
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
-    baseUrl: "yun-choice.github.io/blog",            // 사이트의 기본 도메인(절대 URL 생성 기준)
+    baseUrl: "yun-choice.github.io/blog/",            // 사이트의 기본 도메인(절대 URL 생성 기준)
     ignorePatterns: ["private", "templates", ".obsidian"], // 빌드에서 제외할 경로/패턴
     defaultDateType: "modified",            // 문서 날짜 기본값(수정일 기준)
     theme: {                                // 테마 설정
