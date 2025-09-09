@@ -4,11 +4,12 @@ title: 🌻윤초이스의 기술 블로그
 ## 안녕하세요
 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다
 
-#### About me
-![[zzzz.jpg|240x290]]
+## About me
+![[profile.jpg|300]]
+#### Education
 - 명지대학교 디지털미디어학부 학사
-- 명지대학교 융합데이터사이언스 융합전공 학사
-#### My Skills
+- 명지대학교 융합데이터사이언스 연계전공 학사
+#### Skills
 - Data Analysis
 	- Python
 - Language Skills
@@ -24,4 +25,6 @@ title: 🌻윤초이스의 기술 블로그
 #### Contact me
 - e-mail : choice019@naver.com
 - instagram : [@yun.choice](https://www.instagram.com/yun.choice/)
+- linkedin : [Taekhan Yun](https://www.linkedin.com/in/taekhan-yun-0b82aa375)
+
 
