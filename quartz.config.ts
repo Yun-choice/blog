@@ -14,10 +14,11 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
     enableSPA: true,                        // 단일 페이지 앱(SPA) 모드 사용
     enablePopovers: true,                   // 링크 미리보기 팝오버 활성화
     analytics: {                            // 방문자 분석 설정
-      provider: "plausible",                // 분석 도구 제공자 선택(plausible)
+      provider: "google",                // 분석 도구 제공자 선택(plausible)
+      tagId: "G-YEZS193RDP",
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
-    baseUrl: "quartz.jzhao.xyz",            // 사이트의 기본 도메인(절대 URL 생성 기준)
+    baseUrl: "yun-choice.github.io/blog",            // 사이트의 기본 도메인(절대 URL 생성 기준)
     ignorePatterns: ["private", "templates", ".obsidian"], // 빌드에서 제외할 경로/패턴
     defaultDateType: "modified",            // 문서 날짜 기본값(수정일 기준)
     theme: {                                // 테마 설정
