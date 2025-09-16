@@ -17,3 +17,6 @@ tags:
 
 #### 토글 만들기
 <details> <summary>Short Summary</summary> <p>text to hide</p> </details>
+```
+<details> <summary>Short Summary</summary> <p>text to hide</p> </details>
+```
