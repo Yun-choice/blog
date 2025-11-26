@@ -83,7 +83,7 @@ tags:
 
 위 두 데이터셋을 간단하게 folium 라이브러리를 활용하여 지도에 표시해보았습니다.
 
-<iframe width='400' height='400' src="https://yun-choice.github.io/DataAnalysis/basic_map.html"></iframe>
+<iframe width='400' height='400' src="https://yun-choice.github.io/dsja-shelter-map/basic_map.html"></iframe>
 
 육안으로 보이는 특징은
 1. 취약지역(빨강)에 비해 대피소(초록)가 적어 보인다
@@ -153,7 +153,7 @@ googlemaps 라이브러리를 활용하여 '소재지' column을 위경도 좌�
 
 ### 재배치 결과
 
-<iframe width='500' height='500' src="https://yun-choice.github.io/DataAnalysis/new_sltr_map.html"></iframe>
+<iframe width='500' height='500' src="https://yun-choice.github.io/dsja-shelter-map/new_sltr_map.html")></iframe>
 
 sklearn 라이브러리의 NearestNeighbors로 거리를 계산, 산사태 취약지약으로부터 0.2~1.5km 거리에 있으며, 산사태 위험등급이 3등급 이하인 지역에 위치한 최적의 대피소 후보지 99곳을 새로 선정해보았습니다.
 
