@@ -1,8 +1,8 @@
 ---
-title: 🌻윤초이스의 기술 블로그
+title: 🌻taketech's Data Garden
 ---
-## 안녕하세요
-데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다
+## taketech's DataGarden에 오신 걸 환영합니다
+안녕하세요, 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!
 
 ## About me
 ![[profile.jpg|300]]

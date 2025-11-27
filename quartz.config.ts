@@ -9,13 +9,13 @@ import * as Plugin from "./quartz/plugins"   // Quartz 플러그인 모듈 전�
 
 const config: QuartzConfig = {              // Quartz 설정 객체 선언
   configuration: {                          // 사이트 전역 설정 블록
-    pageTitle: "Yun-choice Blog",           // 브라우저 탭/헤더에 표시될 사이트 제목
+    pageTitle: "taketech의 기술 도입",           // 브라우저 탭/헤더에 표시될 사이트 제목
     pageTitleSuffix: "",                    // 제목 뒤에 붙일 접미사(빈 문자열이면 없음)
     enableSPA: true,                        // 단일 페이지 앱(SPA) 모드 사용
     enablePopovers: true,                   // 링크 미리보기 팝오버 활성화
     analytics: {                            // 방문자 분석 설정
       provider: "google",                // 분석 도구 제공자 선택(plausible)
-      tagId: "G-YEZS193RDP",
+      tagId: "G-END10X2HGZ",
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
     baseUrl: "yun-choice.github.io/blog/",            // 사이트의 기본 도메인(절대 URL 생성 기준)

@@ -7,8 +7,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/Yun-choice/blog",
-      "My Portfolio": "https://yun-choice.github.io/DataAnalysis/data_analyst_intro_test",
+      GitHub: "https://github.com/taketech019",
+      "My Portfolio": "https://taketech019.github.io/DataAnalysis/data_analyst_intro_test.html",
     },
   }),
 }
@@ -75,7 +75,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Comments({
         provider: "giscus",
         options: {
-          repo: "Yun-choice/blog",
+          repo: "taketech019/taketech019.github.io",
           repoId: "R_kgDOPpecrQ",                    
           category: "General",
           categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
