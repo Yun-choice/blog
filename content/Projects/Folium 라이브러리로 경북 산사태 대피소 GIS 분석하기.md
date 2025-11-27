@@ -82,6 +82,11 @@ tags:
 ## EDA
 
 위 두 데이터셋을 간단하게 folium 라이브러리를 활용하여 지도에 표시해보았습니다.
+[!abstract]- Googlemaps api Code ^googlemaps-api
+	```
+	for idx, rows in df_2025.itterows():
+		
+	```
 
 <iframe width='400' height='400' src="https://yun-choice.github.io/dsja-shelter-map/basic_map.html"></iframe>
 
