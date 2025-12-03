@@ -54,7 +54,7 @@ git config --global user.email "your e-mail"
 git config --global user.name "your name"
 ```
 
-```python title="Quartz-Clone"
+```git title="Quartz-Clone"
 git clone https://github.com/jackyzha0/quartz.git
 cd quartz
 npm i
@@ -65,7 +65,7 @@ npx quartz create
 
 이제 Github에 repository를 만들어봅니다.
 
-```git title:repo-create
+```git title="repo-create"
 git repo create username.github.io --public
 git remote rm origin
 git remote add origin git@github.com:username.github.io.git
@@ -79,7 +79,7 @@ git remote add origin git@github.com:username.github.io.git
 1. `quartz/.github/workflows` 경로에 메모장 파일을 새로 만듭니다.
 2. 이름을 deploy.yml로 바꾸고 아래 코드를 붙여넣습니다.
 
-``` title:Notepad-Auto-Github-Actions
+``` notepad title="Notepad-Auto-Github-Actions"
 name: Deploy Quartz site to GitHub Pages
  
 on:
