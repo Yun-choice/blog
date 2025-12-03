@@ -49,7 +49,7 @@ Obsidian의 장점인 그래프 뷰와 수많은 플러그인들, 고급 마크�
 2. 빈 공간에 우클릭 후 "Open git bash here"로 GIt bash에 진입합니다.
 3. 아래 코드를 순서대로 입력합니다. (로그인이 되어있지 않다면 로그인부터 합니다)
 
-```git title:Git-log-in
+```git title='git bash here'
 git config --global user.email "your e-mail"
 git config --global user.name "your name"
 ```
