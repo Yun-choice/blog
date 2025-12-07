@@ -82,10 +82,10 @@ tags:
 ## EDA
 
 위 두 데이터셋을 간단하게 folium 라이브러리를 활용하여 지도에 표시해보았습니다.
->[!abstract]- Folium mapping code ^foliummapping
->	```
->	for idx, rows in df_2025.itterows():
->	```	
+
+```python
+for idx, rows in df_2025.itterows()
+```
 
 
 <iframe width='600' height='400' src="https://taketech019.github.io/dsja-shelter-map/basic_map.html"></iframe>

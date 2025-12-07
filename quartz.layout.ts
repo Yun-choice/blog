@@ -1,10 +1,31 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import RecentNotesForIndex from "./quartz/components/RecnetNotesForIndex"
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.Comments({
+        provider: "giscus",
+        options: {
+          repo: "taketech019/taketech019.github.io",
+          repoId: "R_kgDOPpecrQ",                    
+          category: "General",
+          categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
+          mapping: "pathname",
+          strict: false,
+          reactionsEnabled: true,
+          inputPosition: "bottom",                               
+	  lang: "ko",
+          lightTheme: "light_protanopia",              
+          darkTheme: "dark_protanopia"          }
+      }),
+      condition: (page) => page.fileData.slug !== "index",
+    })
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/taketech019",
@@ -12,6 +33,7 @@ export const sharedPageComponents: SharedLayout = {
     },
   }),
 }
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -22,6 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    RecentNotesForIndex,
   ],
   left: [
     Component.PageTitle(),
@@ -36,62 +59,16 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    // 탐색기 개선 옵션들
-    Component.Explorer({
-      title: "Categories",
-      folderClickBehavior: "collapse", // 폴더 클릭 시 접기/펼치기
-      folderDefaultState: "collapsed", // 기본적으로 폴더 접혀있음
-      useSavedState: true, // 사용자의 폴더 상태 기억
-      mapFn: (node) => {
-        // 파일명에서 날짜 제거하고 카테고리별 그룹핑
-        if (node.file) {
-          node.displayName = node.file.frontmatter?.title || node.displayName
-        }
-        return node
-      },
-      filterFn: (node) => {
-        // draft 파일들 숨기기
-        if (node.file?.frontmatter?.draft) return false
-        return true
-      },
-      order: ["filter", "map", "sort"] // 정렬 순서
-    }),
+    Component.Explorer(),
   ],
   right: [
     Component.Graph(),
-    // 목차 개선
-    Component.DesktopOnly(
-      Component.TableOfContents({
-        maxDepth: 4, // 최대 4단계까지
-        minEntries: 1, // 최소 1개 항목부터 표시
-        showByDefault: true, // 기본적으로 표시
-        collapseByDefault: false // 기본적으로 펼쳐진 상태
-      })
-    ),
+    Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
-  afterBody: [
-    Component.ConditionalRender({
-      component: Component.Comments({
-        provider: "giscus",
-        options: {
-          repo: "taketech019/taketech019.github.io",
-          repoId: "R_kgDOPpecrQ",                    
-          category: "General",
-          categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
-          mapping: "pathname",
-          strict: false,
-          reactionsEnabled: true,
-          inputPosition: "top",                               
-	  lang: "ko",
-          lightTheme: "noborder_light",              
-          darkTheme: "noborder_dark"          }
-      }),
-      condition: (page) => page.fileData.slug !== "index",
-    })
-  ],
 }
-// components for pages that display lists of pages (e.g. tags or folders)
+
+// components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -107,11 +84,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      title: "Categories",
-      folderClickBehavior: "collapse",
-      folderDefaultState: "collapsed",
-      useSavedState: true,
-    }),
+      title: "🔎Explorer"}),
   ],
   right: [],
 }

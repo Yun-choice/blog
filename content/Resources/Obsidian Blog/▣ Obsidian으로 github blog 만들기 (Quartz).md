@@ -151,7 +151,7 @@ jobs:
 
 ---
 ## 관련 게시물
-- [[▷ Quartz 블로그에 편의 기능 추가하기]]
-- [[▷ Quartz 블로그에 SEO와 GA 등록하기]]
+- [[▣ Quartz 블로그에 편의 기능 추가하기]]
+- [[▣ Quartz 블로그에 SEO와 GA 등록하기]]
 ## About me
 - [My github](https://github.com/taketech019)
