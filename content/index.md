@@ -3,7 +3,7 @@ title: 🌻Welcome to taketech's Data Garden
 ---
 안녕하세요, 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!
 
-혹시 게시물에 수정 사항이나 오류가 있다면 댓글 혹은 제 [이메일](taketech019@gmail.com)로 알려주시길 바랍니다.
+혹시 게시물에 수정 사항이나 오류가 있다면 댓글 혹은 제 [Email](taketech019@gmail.com)로 알려주시길 바랍니다.
 
 ---
 ## 🤭About me
