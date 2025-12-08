@@ -15,10 +15,7 @@ export const sharedPageComponents: SharedLayout = {
           repoId: "R_kgDOPpecrQ",                    
           category: "Announcements",
           categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
-          mapping: "pathname",
-          strict: false,
-          reactionsEnabled: true,
-          inputPosition: "bottom",                               
+          
         }
       }),
       condition: (page) => page.fileData.slug !== "index",
