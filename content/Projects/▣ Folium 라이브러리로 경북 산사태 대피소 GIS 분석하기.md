@@ -10,12 +10,15 @@ tags:
   - python
   - 데이터분석
 ---
+- 최초 게시일: 2025-09-08
+---
 ### 들어가며
 
 2025년 6월 23일부터 8월 29일까지 SBS데이터사이언스와저널리즘아카데미 3기에 참여하여 데이터 분석을 배우고, 기사도 써보았습니다.
 
 제 개인프로젝트 주제는 **산사태 대피소 문제**였고, 어떻게 데이터를 수집하고 분석하여, 기사를 작성하였는지 여기에 남겨보고자 합니다.
 #### [기사보러가기](https://numerous-nurse-0bf.notion.site/2526e91642ce80d28e7fffbfb81925a8)
+#### [Github 바로가기](https://github.com/taketech019/dsja-shelter-map)
 ---
 ### 분석 배경
 
@@ -82,11 +85,6 @@ tags:
 ## EDA
 
 위 두 데이터셋을 간단하게 folium 라이브러리를 활용하여 지도에 표시해보았습니다.
-
-```python
-for idx, rows in df_2025.itterows()
-```
-
 
 <iframe width='600' height='400' src="https://taketech019.github.io/dsja-shelter-map/basic_map.html"></iframe>
 
@@ -160,7 +158,7 @@ googlemaps 라이브러리를 활용하여 '소재지' column을 위경도 좌�
 
 <iframe width='500' height='500' src="https://taketech019.github.io/dsja-shelter-map/new_sltr_map.html")></iframe>
 
-sklearn 라이브러리의 NearestNeighbors로 거리를 계산, 산사태 취약지약으로부터 0.2~1.5km 거리에 있으며, 산사태 위험등급이 3등급 이하인 지역에 위치한 최적의 대피소 후보지 99곳을 새로 선정해보았습니다.
+sklearn 라이브러리의 NearestNeighbors로 거리를 계산, 산사태 취약지약으로부터 0.2~1.5km 거리에 있으며, 산사태 위험등급이 3등급 이하인 지역에 위치한 최적의 대피소 후보지 99곳을 새로 선정해보았습니다. *[자세한 코드는 여기서 확인하세요](https://github.com/taketech019/dsja-shelter-map)*
 
 그 결과 취약지역에서부터 신규 대피소 99개소까지의 거리는 **기존 평균 약 1.6km에서 약 1.2km로 크게 줄었습니다.**
 
@@ -173,9 +171,9 @@ sklearn 라이브러리의 NearestNeighbors로 거리를 계산, 산사태 취�
 
 생각보다 도메인 지식을 쌓는 것도 오래 걸리고, 데이터를 수집하는 단계부터 막히는 부분이 많아 고생한 기억이 나네요.
 
-데이터 분석의 목적이 '기사 작성'이다보니 raw데이터와 분석 과정의 신뢰성을 계속 신경쓰고, 배경지식도 꼼꼼히 조사할 필요가 있었습니다. *(데이터 저널리즘에서 가장 중요한 요소라고 생각합니다)*
+**데이터 분석의 목적이 기사 작성**이다보니 raw데이터와 분석 과정의 신뢰성을 계속 신경쓰고, 배경지식도 꼼꼼히 조사할 필요가 있었습니다. *(데이터 저널리즘에서 가장 중요한 요소라고 생각합니다)*
 
 그래도 힘든 과정을 뒤로하고 내가 만든 시각화 자료들을 보면 나름의 뿌듯함과 성취감이 드는 게 데이터 분석의 묘미가 아닐까 싶네요. 
 
-아래는 해당 프로젝트 발표PPT입니다. 공들여 만들었는데 발표 시간이 5분이라 아쉬워 여기에라도 올립니다. 감사합니다.
+아래는 해당 프로젝트 발표PPT입니다. 공들여 만들었는데 발표 시간이 5분이라 아쉬워 여기에라도 올려봅니다. 긴 글 읽어주셔서 감사합니다.
 **[발표ppt보러가기](https://www.canva.com/design/DAGwb1pRgEg/Kn-UWo-ns3IENK_ByQdzTw/view?utm_content=DAGwb1pRgEg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc582379887)**

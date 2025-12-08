@@ -17,8 +17,8 @@ export const sharedPageComponents: SharedLayout = {
           categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
           lang: "ko",
           themeUrl: "https://example.com/static/giscus", // corresponds to quartz/static/giscus/                     
-          lightTheme: "light", // corresponds to light-theme.css in quartz/static/giscus/
-          darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
+          lightTheme: "dark", // corresponds to light-theme.css in quartz/static/giscus/
+          darkTheme: "light", // corresponds to dark-theme.css quartz/static/giscus/
         }
       }),
       condition: (page) => page.fileData.slug !== "index",
