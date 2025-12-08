@@ -82,8 +82,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      title: "🔎Explorer"}),
+    Component.Explorer(),
   ],
   right: [],
 }
