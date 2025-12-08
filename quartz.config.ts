@@ -19,14 +19,14 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
     baseUrl: "taketech019.github.io/",            // 사이트의 기본 도메인(절대 URL 생성 기준)
-    ignorePatterns: ["private", "templates", ".obsidian"], // 빌드에서 제외할 경로/패턴
+    ignorePatterns: ["private", "Templates", ".obsidian", "Inbox"], // 빌드에서 제외할 경로/패턴
     defaultDateType: "modified",            // 문서 날짜 기본값(수정일 기준)
     theme: {                                // 테마 설정
       fontOrigin: "googleFonts",            // 폰트 로딩 소스(Google Fonts)
       cdnCaching: true,                     // CDN 캐싱 사용 여부
       typography: {                         // 글꼴 패밀리 지정
         header: "Schibsted Grotesk",        // 제목 폰트
-        body: "Noto Sans Korean",            // 본문 폰트
+        body: "Source Sans Pro",            // 본문 폰트
         code: "IBM Plex Mono",              // 코드 블록 폰트
       },
       colors: {                             // 색상 팔레트

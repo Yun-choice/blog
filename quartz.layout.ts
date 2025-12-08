@@ -18,7 +18,8 @@ export const sharedPageComponents: SharedLayout = {
           mapping: "pathname",
           strict: false,
           reactionsEnabled: true,
-          inputPosition: "bottom",                               
+          inputPosition: "bottom", 
+          lang: "ko"                              
         }
       }),
       condition: (page) => page.fileData.slug !== "index",
@@ -56,7 +57,8 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({title: "🔎Explorer"}),
+    Component.Explorer({title: "🔎Explorer", 
+      folderDefaultState: "open"}),
   ],
   right: [
     Component.Graph(),
