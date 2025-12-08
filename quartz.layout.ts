@@ -13,15 +13,13 @@ export const sharedPageComponents: SharedLayout = {
         options: {
           repo: "taketech019/taketech019.github.io",
           repoId: "R_kgDOPpecrQ",                    
-          category: "General",
+          category: "Announcements",
           categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
           mapping: "pathname",
           strict: false,
           reactionsEnabled: true,
           inputPosition: "bottom",                               
-	  lang: "ko",
-          lightTheme: "dark_protanopia",              
-          darkTheme: "dark_protanopia"          }
+        }
       }),
       condition: (page) => page.fileData.slug !== "index",
     })
