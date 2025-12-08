@@ -15,11 +15,10 @@ export const sharedPageComponents: SharedLayout = {
           repoId: "R_kgDOPpecrQ",                    
           category: "light_protanopia",
           categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
-          mapping: "pathname",
-          strict: false,
-          reactionsEnabled: true,
-          inputPosition: "bottom", 
-          lang: "ko"                              
+          lang: "ko",
+          themeUrl: "https://example.com/static/giscus", // corresponds to quartz/static/giscus/                     
+          lightTheme: "light", // corresponds to light-theme.css in quartz/static/giscus/
+          darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
         }
       }),
       condition: (page) => page.fileData.slug !== "index",
