@@ -20,7 +20,7 @@ export const sharedPageComponents: SharedLayout = {
           reactionsEnabled: true,
           inputPosition: "bottom",                               
 	  lang: "ko",
-          lightTheme: "light_protanopia",              
+          lightTheme: "dark_protanopia",              
           darkTheme: "dark_protanopia"          }
       }),
       condition: (page) => page.fileData.slug !== "index",

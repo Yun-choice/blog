@@ -26,7 +26,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
       cdnCaching: true,                     // CDN 캐싱 사용 여부
       typography: {                         // 글꼴 패밀리 지정
         header: "Schibsted Grotesk",        // 제목 폰트
-        body: "Source Sans Pro",            // 본문 폰트
+        body: "Noto Sans Korean",            // 본문 폰트
         code: "IBM Plex Mono",              // 코드 블록 폰트
       },
       colors: {                             // 색상 팔레트
@@ -47,7 +47,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
           gray: "#646464",                  // 기본 회색
           darkgray: "#d4d4d4",              // 밝은 텍스트용 회색
           dark: "#ebebec",                  // 가장 밝은 텍스트색
-          secondary: "#7b97aa",             // 포인트 보조색
+          secondary: "#80951F",             // 포인트 보조색
           tertiary: "#84a59d",              // 보조2 색
           highlight: "rgba(143, 159, 169, 0.15)", // 하이라이트 배경
           textHighlight: "#b3aa0288",       // 텍스트 드래그/강조 색
