@@ -10,4 +10,4 @@ tags:
 ---
 ## About me
 - [My github](https://github.com/taketech019)
-- 
+- [Blog](https://taketech019.github.io)
