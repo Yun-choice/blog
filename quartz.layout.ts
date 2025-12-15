@@ -6,24 +6,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [
-    Component.ConditionalRender({
-      component: Component.Comments({
-        provider: "giscus",
-        options: {
-          repo: "taketech019/taketech019.github.io",
-          repoId: "R_kgDOPpecrQ",                    
-          category: "light_protanopia",
-          categoryId: "DIC_kwDOPpecrc4Cu8Rp",        
-          lang: "ko",
-          themeUrl: "https://example.com/static/giscus", // corresponds to quartz/static/giscus/                     
-          lightTheme: "dark", // corresponds to light-theme.css in quartz/static/giscus/
-          darkTheme: "light", // corresponds to dark-theme.css quartz/static/giscus/
-        }
-      }),
-      condition: (page) => page.fileData.slug !== "index",
-    })
-  ],
+  afterBody: [],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/taketech019",

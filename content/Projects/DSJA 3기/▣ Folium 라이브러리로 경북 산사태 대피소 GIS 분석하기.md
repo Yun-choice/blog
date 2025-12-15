@@ -78,7 +78,7 @@ tags:
 - *출처 : [산림청 산사태정보시스템](https://sansatai.forest.go.kr/) 크롤링*
 
 ![[Pasted image 20250910145606.png|550]]
-2239 rows x 7 columns *[코드 보러가기](https://github.com/taketech019/dsja-shelter-map/blob/main/notebook/CR_%EC%82%B0%EC%82%AC%ED%83%9C%EC%B7%A8%EC%95%BD%EC%A7%80%EC%97%AD_%EB%8C%80%ED%94%BC%EC%86%8C_%EC%B5%9C%EC%A2%85.ipynb)*
+- 2239 rows x 7 columns *[코드 보러가기](https://github.com/taketech019/dsja-shelter-map/blob/main/notebook/CR_%EC%82%B0%EC%82%AC%ED%83%9C%EC%B7%A8%EC%95%BD%EC%A7%80%EC%97%AD_%EB%8C%80%ED%94%BC%EC%86%8C_%EC%B5%9C%EC%A2%85.ipynb)*
 
 경상북도 산사태 대피소의 고유 id, 지번주소, 위경도 데이터 등이 들어있습니다.
 
@@ -88,9 +88,9 @@ tags:
 
 <iframe width='600' height='400' src="https://taketech019.github.io/dsja-shelter-map/basic_map.html"></iframe>
 
-육안으로 보이는 특징은
-1. 취약지역(빨강)에 비해 대피소(초록)가 적어 보인다
-2. 취약지역과 대피소가 멀어 보인다
+- 육안으로 보이는 특징은
+	1. 취약지역(빨강)에 비해 대피소(초록)가 적어 보인다
+	2. 취약지역과 대피소가 멀어 보인다
 
 정도가 있겠습니다. 실제로도 그럴지 좀 더 자세히 분석해보겠습니다.
 
@@ -138,6 +138,7 @@ harversine 라이브러리로 산사태 취약지역으로부터 가장 가까�
 청송군은 취약지역으로부터 대피소까지의 거리 평균이 약 1.6km로 매우 먼 편이며, 지난 3월 발생한 산불 영향이 큰 지역이기에 분석 대상으로 삼았습니다.
 
 ### 경상북도 청송군 위험지도.tif
+
 - *출처 : [산림공간정보서비스](https://map.forest.go.kr/forest/?systype=mapSearch&searchOption=landslide&longitude=14180192.1832882&latitude=4350576.8953995&scale=6)*
 ![[Pasted image 20250915232402.png|500]]
 
