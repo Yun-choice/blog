@@ -78,7 +78,7 @@ tags:
 - *출처 : [산림청 산사태정보시스템](https://sansatai.forest.go.kr/) 크롤링*
 
 ![[Pasted image 20250910145606.png|550]]
-2239 rows x 7 columns *(크롤링 방법은 따로 업로드하겠습니다)*
+2239 rows x 7 columns *[코드 보러가기](https://github.com/taketech019/dsja-shelter-map/blob/main/notebook/CR_%EC%82%B0%EC%82%AC%ED%83%9C%EC%B7%A8%EC%95%BD%EC%A7%80%EC%97%AD_%EB%8C%80%ED%94%BC%EC%86%8C_%EC%B5%9C%EC%A2%85.ipynb)*
 
 경상북도 산사태 대피소의 고유 id, 지번주소, 위경도 데이터 등이 들어있습니다.
 
