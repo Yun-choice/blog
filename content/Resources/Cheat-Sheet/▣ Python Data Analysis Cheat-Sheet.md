@@ -7,7 +7,6 @@ tags:
   - "#textmining"
   - GIS
   - crawling
-최초 업로드일: 2025-12-03
 ---
 - 최초 업로드 일자: 2025-12-03
 # I. Useful Things
@@ -325,7 +324,3 @@ for idx, row in df.iterrows():
 		icon=folium.Icon(icon=row['icon'], color=row['col'], prefix='fa')).add_to(m)
 		
 ```
-
----
-## About me
-- [My github](https://github.com/taketech019)

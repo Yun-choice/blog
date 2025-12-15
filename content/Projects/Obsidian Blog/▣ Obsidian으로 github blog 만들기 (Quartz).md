@@ -7,7 +7,12 @@ tags:
   - 기술블로그
 최초 업로드일: 2025-11-28
 ---
-- 최초 게시일 2025-11-28
+>[!info] Overview
+>Obsidian과 Quartz 템플릿을 활용해 GitHub Pages 기반 기술 블로그를 구축하는 전 과정을 정리한 글이다. 
+>비전공자도 따라 할 수 있도록 설치, 클론, 배포, Obsidian 연동까지의 흐름을 단계별로 안내한다.
+>
+>**Platform:** Quartz, git
+>**First upload date:** 2025-11-28
 ---
 ## I. 들어가며
 
@@ -20,13 +25,13 @@ tags:
 ## II. 왜 Quartz인가?
 
 제가 생각하는 Quartz의 장점을 말해보겠습니다.
-#### 1. Obsidian을 사용한다!
+### 1. Obsidian을 사용한다!
 
 Obsidian의 장점인 그래프 뷰와 수많은 플러그인들, 고급 마크다운 문법을 그대로 사용 및 배포할 수 있다는 것이 아주 만족스럽습니다. 
 
 또한 Notion과 달리 Obsidian은 제가 작성한 노트가 로컬 디렉토리에 마크다운 파일로 저장되기 때문에, 매우 매우 쾌적합니다!
 
-#### 2. 세팅과 배포가 쉽고 빠르다
+### 2. 세팅과 배포가 쉽고 빠르다
 
 저는 웹 개발에 대해 조금도 모르는 비전공자 입니다.
 그럼에도 불구하고, 블로그 개설부터 seo 색인 생성 및 GA4 연동까지 오랜 시간이 걸리지 않았습니다. 
@@ -45,7 +50,7 @@ Obsidian의 장점인 그래프 뷰와 수많은 플러그인들, 고급 마크�
 	- [git 설치](https://git-scm.com/)
 	- [node.js 설치](https://nodejs.org/en/download)
 
-#### 1. Quartz Github Clone하기
+### 1. Quartz Github Clone하기
 
 1. 블로그의 구성 요소를 저장할 폴더를 지정합니다.
 2. 빈 공간에 우클릭 후 "Open git bash here"로 GIt bash에 진입합니다.
@@ -63,7 +68,7 @@ npm i
 npx quartz create
 ```
 *지정 폴더에 quartz 폴더가 생성되었다면 clone 성공!*
-#### 2. Git repository 생성
+### 2. Git repository 생성
 
 이제 Github에 repository를 만들어봅니다.
 
@@ -76,7 +81,7 @@ git remote add origin git@github.com:username.github.io.git
 리포지터리 이름은 **username.github.io**로 지정합니다.
 저는 taketech019.github.io로 하였습니다.
 
-#### 3. GIthub pages 활성화
+### 3. GIthub pages 활성화
 
 1. `quartz/.github/workflows` 경로에 메모장 파일을 새로 만듭니다.
 2. 이름을 deploy.yml로 바꾸고 아래 코드를 붙여넣습니다.
@@ -132,7 +137,7 @@ jobs:
 3. 다시 Git bash로 진입 후 `npx quartz sync`를 입력하여 github에 push합니다.
 4. "https://username.github.io" 에 접속하면 생성된 블로그를 볼 수 있습니다!
 
-#### 4. Obsidian 연동
+### 4. Obsidian 연동
 
 1. Obsidian에서 "Open foloder as vault" 선택 후 content폴더를 선택합니다.
 2. Community plugins에서 Git 설치 후 Enable합니다.
@@ -154,6 +159,6 @@ jobs:
 ---
 ## 관련 게시물
 - [[▣ Quartz 블로그에 편의 기능 추가하기]]
-- [[▣ Quartz 블로그에 SEO와 GA 등록하기]]
+- [[▣ Quartz 블로그에 SEO와 GA4 등록하기]]
 ## About me
 - [My github](https://github.com/taketech019)
