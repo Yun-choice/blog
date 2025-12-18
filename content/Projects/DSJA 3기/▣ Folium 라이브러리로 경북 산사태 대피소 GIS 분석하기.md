@@ -47,7 +47,7 @@ tags:
 위경도 좌표에는 일부 오류가 있어 GCP(Google Cloud Platform)를 활용해 googlemaps api key를 발급받아 **지번주소를 새로운 위경도 좌표로 변환**해주었습니다.
 
 >[!abstract]- Googlemaps api Code ^googlemaps-api
->	```
+>	```python
 >	import googlemaps
 >	import time
 >	

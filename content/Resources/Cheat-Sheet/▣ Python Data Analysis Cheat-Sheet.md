@@ -1,14 +1,18 @@
 ---
 tags:
   - python
-  - obsidian
   - cheat-sheet
   - 데이터분석
   - "#textmining"
   - GIS
   - crawling
 ---
-- 최초 업로드 일자: 2025-12-03
+>[!info] Overview
+>Python 환경에서 데이터 분석을 위해 사용할 수 있는 다양한 코드블럭을 모아두었다.
+>
+>**Platform:** Python
+>**First upload date:** 2025-12-03
+---
 # I. Useful Things
 
 ```python title="Basic Setting"
@@ -170,7 +174,7 @@ def gcp_rev_geocoding(lat, lon):
     return dic_addr # 주소 문자열 반환
 ```
 
-### 3) kakao map api
+### 3) kakao map api^kakao-api
 
 ```python
 import request
@@ -193,6 +197,18 @@ lat = result['documents'][0]['address']['y']
 # III. Data Analysis
 
 ## 1. EDA
+
+### 1) 상관분석
+
+```python
+df = dataframe.corr() # 상관관계 
+sns.heatmap(df, cmap = 'RdYlBu_r', # 파~빨 
+			annot = True, # 실제 값을 표시한다 
+			mask= df < 0.2, # 표시하지 않을 마스크 부분을 지정한다 
+			linewidths=.5, # 경계면 실선으로 구분하기 
+			cbar_kws={"shrink": .5},# 컬러바 크기 절반으로 줄이기 
+			vmin = -1,vmax = 1 # 컬러바 범위 -1 ~ 1 )
+```
 
 ## 2. Text Mining
 

@@ -1,6 +1,8 @@
 ---
 tags:
   - 마크다운
+  - obsidian
+  - cheat-sheet
 ---
 ### 콜아웃
 >[!note] '노트' 콜아웃
@@ -17,6 +19,6 @@ tags:
 
 #### 토글 만들기
 <details> <summary>Short Summary</summary> <p>text to hide</p> </details>
-```
+```html
 <details> <summary>Short Summary</summary> <p>text to hide</p> </details>
 ```
