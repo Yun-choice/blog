@@ -8,10 +8,12 @@ tags:
 최초 업로드일: 2025-11-28
 ---
 >[!info] Overview
->Obsidian과 Quartz 템플릿을 활용해 GitHub Pages 기반 기술 블로그를 구축하는 전 과정을 정리한 글이다. 
->비전공자도 따라 할 수 있도록 설치, 클론, 배포, Obsidian 연동까지의 흐름을 단계별로 안내한다.
+>Obsidian과 Quartz 템플릿을 활용해 GitHub Pages 기반 기술 블로그를 구축하는 전 과정을 정리한 글입니다. 
+>
+>비전공자도 따라 할 수 있도록 설치, 클론, 배포, Obsidian 연동까지의 흐름을 단계별로 안내합니다.
 >
 >**Platform:** Quartz, git
+>
 >**First upload date:** 2025-11-28
 ---
 ## I. 들어가며
