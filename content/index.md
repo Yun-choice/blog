@@ -12,6 +12,7 @@ title: 🌻Welcome to TakeTech's Data Garden
 - #데이터분석 
 - #python 
 - #theory
+- #ML/DL 
 - #tableau
 
 ---
