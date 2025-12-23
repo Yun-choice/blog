@@ -15,6 +15,10 @@ title: 🌻Welcome to TakeTech's Data Garden
 - #ML/DL 
 - #tableau
 
+### 추천 콘텐츠
+- [[1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]]
+- [[▣ Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]
+- [[▣ Python Data Analysis Cheat-Sheet]]
 ---
 
 ## 🤭About me
