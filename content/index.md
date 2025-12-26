@@ -1,7 +1,6 @@
 ---
-title: 🌻Welcome to TakeTech's Data Garden
+title: Welcome to TakeTech's Data Garden 🌻
 ---
-
 ## 안녕하세요
 
 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!
