@@ -8,9 +8,6 @@
 
 *혹시 게시물에 수정 사항이나 오류가 있다면 댓글 혹은 제 [[index#^email\|이메일]]로 연락 부탁드립니다.*
 
-### Recent Notes
-![[RecentNotes.base]]
-
 ### 데이터 분석 및 기술 관련 tags
 - #데이터분석 
 - #python 
