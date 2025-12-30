@@ -2,6 +2,7 @@
 {"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:46:29.778+09:00","tags":["python","cheat-sheet","데이터분석","#textmining","GIS","crawling"],"cssclasses":""}
 ---
 
+
 >[!info] Overview
 >Python 환경에서 데이터 분석을 위해 사용할 수 있는 다양한 코드블럭을 모아두었다.
 >
@@ -170,7 +171,7 @@ def gcp_rev_geocoding(lat, lon):
     return dic_addr # 주소 문자열 반환
 ```
 
-### 3) kakao map api^kakao-api
+### 3) kakao map api
 
 ```python
 import request
