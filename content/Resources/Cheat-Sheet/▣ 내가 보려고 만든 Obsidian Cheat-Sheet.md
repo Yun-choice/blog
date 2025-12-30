@@ -3,6 +3,7 @@ tags:
   - 마크다운
   - obsidian
   - cheat-sheet
+최초 업로드일: 2025-11-08
 ---
 ### 콜아웃
 >[!note] '노트' 콜아웃

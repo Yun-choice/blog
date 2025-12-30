@@ -1,0 +1,29 @@
+summaries:
+  Earliest: values.filter(value.isType("date")).reduce(if(value < acc || acc == null, value, acc), null)
+  Latest: values.filter(value.isType("date")).reduce(if(value > acc || acc == null, value, acc), null)
+properties:
+  file.name:
+    displayName: Name
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - '!file.inFolder("Utilites")'
+        - '!file.inFolder("Inbox")'
+        - '!file.hasProperty("title")'
+    order:
+      - file.name
+      - tags
+      - 최초 업로드일
+      - file.mtime
+    sort:
+      - property: tags
+        direction: ASC
+      - property: file.mtime
+        direction: ASC
+    summaries: {}
+    columnSize:
+      note.tags: 161
+      note.최초 업로드일: 123
+      file.mtime: 87

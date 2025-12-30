@@ -6,6 +6,7 @@ tags:
   - "#textmining"
   - GIS
   - crawling
+최초 업로드일: 2025-12-03
 ---
 >[!info] Overview
 >Python 환경에서 데이터 분석을 위해 사용할 수 있는 다양한 코드블럭을 모아두었다.
