@@ -2,6 +2,7 @@
 {"publish":true,"title":"Welcome to TakeTech's Data Garden 🌻","created":"2025-12-15T13:05:26.684+09:00","modified":"2025-12-30T12:37:05.825+09:00","cssclasses":""}
 ---
 
+
 ## 안녕하세요
 
 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!

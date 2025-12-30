@@ -2,6 +2,7 @@
 {"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-18T17:53:04.462+09:00","tags":["quartz","obsidian","digitalgarden","깃헙블로그","기술블로그"],"cssclasses":""}
 ---
 
+
 >[!info] Overview
 >Obsidian과 Quartz 템플릿을 활용해 GitHub Pages 기반 기술 블로그를 구축하는 전 과정을 정리한 글입니다. 
 >
