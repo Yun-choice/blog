@@ -1,12 +1,7 @@
 ---
-tags:
-  - quartz
-  - obsidian
-  - digitalgarden
-  - 깃헙블로그
-  - 기술블로그
-최초 업로드일: 2025-11-28
+{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-18T17:53:04.462+09:00","tags":["quartz","obsidian","digitalgarden","깃헙블로그","기술블로그"],"cssclasses":""}
 ---
+
 >[!info] Overview
 >Obsidian과 Quartz 템플릿을 활용해 GitHub Pages 기반 기술 블로그를 구축하는 전 과정을 정리한 글입니다. 
 >
@@ -147,7 +142,7 @@ jobs:
 4. 이제 해당 볼트에서 작성한 모든 노트가 블로그의 게시물이 됩니다!
 
 **축하합니다! 해냈군요!**
-![[Pasted image 20251203012624.png|300]]
+![[Utilities/attatchments/Pasted image 20251203012624.png|300]]
 - *작성된 노트는 기본적으로 모두 content 폴더에 있어야 하니 주의*
 ## IV. 나가며
 
@@ -160,7 +155,7 @@ jobs:
 
 ---
 ## 관련 게시물
-- [[▣ Quartz 블로그에 편의 기능 추가하기]]
-- [[▣ Quartz 블로그에 SEO와 GA4 등록하기]]
+- [[Inbox/▣ Quartz 블로그에 편의 기능 추가하기]]
+- [[Inbox/▣ Quartz 블로그에 SEO와 GA4 등록하기]]
 ## About me
 - [My github](https://github.com/taketech019)
