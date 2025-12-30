@@ -176,7 +176,7 @@ def gcp_rev_geocoding(lat, lon):
     return dic_addr # 주소 문자열 반환
 ```
 
-### 3) kakao map api^kakao-api
+### 3) kakao map api
 
 ```python
 import request

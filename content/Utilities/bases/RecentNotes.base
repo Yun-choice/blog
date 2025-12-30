@@ -9,7 +9,7 @@ views:
     name: Table
     filters:
       and:
-        - '!file.inFolder("Utilites")'
+        - '!file.inFolder("Utilities")'
         - '!file.inFolder("Inbox")'
         - '!file.hasProperty("title")'
     order:
