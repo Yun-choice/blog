@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - v4
- 
+
+env:
+    THEME_NAME: sunbather
+
 permissions:
   contents: read
   pages: write
-  id-token: write
-  env:
-    THEME_NAME: sunbather
+  id-token: write  
  
 concurrency:
   group: "pages"
