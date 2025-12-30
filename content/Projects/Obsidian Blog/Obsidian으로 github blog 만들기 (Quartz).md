@@ -64,6 +64,7 @@ cd quartz
 npm i
 npx quartz create
 ```
+
 *지정 폴더에 quartz 폴더가 생성되었다면 clone 성공!*
 ### 2. Git repository 생성
 
@@ -142,7 +143,9 @@ jobs:
 4. 이제 해당 볼트에서 작성한 모든 노트가 블로그의 게시물이 됩니다!
 
 **축하합니다! 해냈군요!**
+
 ![[Utilities/attatchments/Pasted image 20251203012624.png|300]]
+
 - *작성된 노트는 기본적으로 모두 content 폴더에 있어야 하니 주의*
 ## IV. 나가며
 

@@ -40,36 +40,35 @@
 
 위경도 좌표에는 일부 오류가 있어 GCP(Google Cloud Platform)를 활용해 googlemaps api key를 발급받아 **지번주소를 새로운 위경도 좌표로 변환**해주었습니다.
 
->[!abstract]- Googlemaps api Code ^googlemaps-api
->	```python
->	import googlemaps
->	import time
->	
->	# Google Maps API 키 설정
->	gmaps = googlemaps.Client(key='Your Key')		
->	
->	# 좌표 저장용 컬럼 추가
->	df_2025['위도_geo'] = None
->	df_2025['경도_geo'] = None
->	
->	# 주소 컬럼 할당
->	addr = 'addr'
->	
->	# 주소 → 위경도 변환
->	for idx, row in df_2025.iterrows():
->		address = row[addr]
->		try:
->			geocode_result = gmaps.geocode(address)
->			if geocode_result:
->				location = geocode_result[0]['geometry']['location']
->				df_2025.at[idx, '위도_geo'] = location['lat']
->				df_2025.at[idx, '경도_geo'] = location['lng']
->			else:
->				print(f"[경고] 주소를 찾을 수 없음: {address}")
->		except Exception as e:
->			print(f"[에러] {address} 변환 실패: {e}")
->		time.sleep(0.01)  # 과도한 요청 방지 (QPS 제한 고려)
->	```
+```python
+import googlemaps
+import time
+
+# Google Maps API 키 설정
+gmaps = googlemaps.Client(key='Your Key')		
+
+# 좌표 저장용 컬럼 추가
+df_2025['위도_geo'] = None
+df_2025['경도_geo'] = None
+
+# 주소 컬럼 할당
+addr = 'addr'
+
+# 주소 → 위경도 변환
+for idx, row in df_2025.iterrows():
+	address = row[addr]
+	try:
+		geocode_result = gmaps.geocode(address)
+		if geocode_result:
+			location = geocode_result[0]['geometry']['location']
+			df_2025.at[idx, '위도_geo'] = location['lat']
+			df_2025.at[idx, '경도_geo'] = location['lng']
+		else:
+			print(f"[경고] 주소를 찾을 수 없음: {address}")
+	except Exception as e:
+		print(f"[에러] {address} 변환 실패: {e}")
+	time.sleep(0.01)  # 과도한 요청 방지 (QPS 제한 고려)
+```
 
 지정면적 column의 결측은 평균값으로 대치하였습니다.
 
@@ -96,6 +95,7 @@
 #### 1. 대피소 부족
 
 ![[Utilities/attatchments/Pasted image 20250915215157.png|500]]
+
 경북지역 산사태 취약지역은 총 6275개, 대피소는 2239개소로 약 35% 비율입니다.
 
 시군구 단위로 본다면 상당수가 40% 이하로, 전반적 대피소 부족 현상을 보이고 있습니다.
@@ -111,6 +111,7 @@ harversine 라이브러리로 산사태 취약지역으로부터 가장 가까�
 거리 평균 약 1.4km, 중위값 약 1.2km였으며, **6km 이상 떨어진 대피소**도 존재했습니다.
 
 ![[Utilities/attatchments/Pasted image 20250915220859.png|500]]
+
 이를 대한민국 노인 보행속도 평균 1.06m/s로 소요시간 환산 결과,
 
 평균 약 22분, 중위값 약 19분이었으며, **1시간 이상 소요되는 대피소가 166개소 존재**했습니다.
@@ -118,6 +119,7 @@ harversine 라이브러리로 산사태 취약지역으로부터 가장 가까�
 #### 3. 너무 가까운 대피소
 
 ![[Utilities/attatchments/Pasted image 20250915221408.png]]
+
 반대로 산사태 취약지역과 대피소가 맞붙어있는 경우도 있었습니다.
 
 위 사진은 경산시의 한 대피소입니다. 산사태 취약지역과 대피소 간 거리는 **불과 약 30m**로, 네이버 로드뷰 확인 결과 산 바로 아래 위치해있어 **산새태 피해 가능성이 매우 높아보입니다.**
@@ -152,7 +154,7 @@ rasterio 라이브러리를 활용하여 핸들링했습니다.
 이중 청송군 소재 복지센터 및 경로당 232곳을 후보지로 하였고
 
 googlemaps 라이브러리를 활용하여 '소재지' column을 위경도 좌표로 변환하였습니다.
-*(자세한 방법은 [[Projects/DSJA 3기/▣ Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기#^googlemaps-api\|api활용코드]]를 확인하세요)*
+*(자세한 방법은 [[Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기#^googlemaps-api\|api활용코드]]를 확인하세요)*
 
 ### 재배치 결과
 
