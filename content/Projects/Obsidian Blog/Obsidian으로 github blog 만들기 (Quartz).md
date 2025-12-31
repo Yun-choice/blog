@@ -145,7 +145,7 @@ jobs:
 
 **축하합니다! 해냈군요!**
 
-![[Utilities/attatchments/Pasted image 20251203012624.png|300]]
+![[Utillities/attatchments/Pasted image 20251203012624.png|300]]
 
 - *작성된 노트는 기본적으로 모두 content 폴더에 있어야 하니 주의*
 ## IV. 나가며
