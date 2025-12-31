@@ -91,7 +91,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
       Plugin.Favicon(),                     // 파비콘 처리
       Plugin.NotFoundPage(),                // 404 페이지 생성
       // Comment out CustomOgImages to speed up build time
-      //Plugin.CustomOgImages(),              // OG 이미지 자동 생성(빌드 느려지면 주석 처리)
+      Plugin.CustomOgImages(),              // OG 이미지 자동 생성(빌드 느려지면 주석 처리)
     ],
   },
 }
