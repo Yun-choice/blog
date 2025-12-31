@@ -2,6 +2,7 @@
 {"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:53:57.545+09:00","tags":["마크다운","obsidian","cheat-sheet"],"cssclasses":""}
 ---
 
+
 ### 콜아웃
 >[!note] '노트' 콜아웃
 >펜 아이콘이 떠요.

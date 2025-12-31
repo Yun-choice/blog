@@ -2,6 +2,7 @@
 {"publish":true,"title":"Welcome to TakeTech's Data Garden 🌻","created":"2025-12-15T13:05:26.684+09:00","modified":"2025-12-30T12:37:05.825+09:00","cssclasses":""}
 ---
 
+
 ## 안녕하세요
 
 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!
@@ -17,8 +18,8 @@
 
 ### 추천 콘텐츠
 - [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]]
-- [[Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]
-- [[Python Data Analysis Cheat-Sheet]]
+- [[Projects/DSJA 3기/Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]
+- [[Resources/Cheat-Sheet/Python Data Analysis Cheat-Sheet]]
 ---
 
 ## 🤭About me
