@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /search
+Disallow: /category/
+Disallow: /tag/
+Allow: /
+Sitemap: https://taketech019.github.io/sitemap.xml
