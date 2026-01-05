@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"Welcome to TakeTech's Data Garden 🌻","created":"2025-12-15T13:05:26.684+09:00","modified":"2025-12-30T12:37:05.825+09:00","cssclasses":""}
+{"publish":true,"title":"Welcome to TakeTech's Data Garden 🌻","created":"2025-12-15T13:05:26.684+09:00","modified":"2025-12-30T12:37:05.825+09:00","published":"2026-01-05T15:09:11.729+09:00","cssclasses":""}
 ---
 
 
@@ -9,12 +9,28 @@
 
 *혹시 게시물에 수정 사항이나 오류가 있다면 댓글 혹은 제 [E-mail](index.md#📫Contact%20me)로 연락 부탁드립니다.*
 
-### 데이터 분석 및 기술 관련 tags
-- #데이터분석 
-- #python 
-- #theory
-- #ML/DL 
-- #tableau
+### Recent Notes
+
+| Posts                                                                                                                                | Tags                                                                                                          | Created at. | Modified at. |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ----------- | ------------ |
+| [[Projects/Obsidian Blog/Obsidian으로 github blog 만들기 (Quartz)\|Obsidian으로 github blog 만들기 (Quartz)]]                               | <ul><li>quartz</li><li>obsidian</li><li>digitalgarden</li><li>깃헙블로그</li><li>기술블로그</li></ul>                   | 2025, 12-30 | 2026, 01-05  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기\|1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]] | <ul><li>데이터분석</li><li>python</li></ul>                                                                        | 2025, 12-30 | 2026, 01-05  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기\|2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기]]             | <ul><li>데이터분석</li><li>ML/DL</li></ul>                                                                         | 2026, 01-05 | 2026, 01-05  |
+| [[Projects/DSJA 3기/Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기\|Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]                                         | <ul><li>데이터저널리즘</li><li>SBS데이터사이언스와저널리즘아카데미</li><li>Folium</li><li>GIS</li><li>python</li><li>데이터분석</li></ul> | 2025, 12-30 | 2025, 12-31  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]                         | <ul><li>데이터분석</li><li>tableau</li></ul>                                                                       | 2025, 12-30 | 2025, 12-31  |
+| [[Resources/Cheat-Sheet/Python Data Analysis Cheat-Sheet\|Python Data Analysis Cheat-Sheet]]                                      | <ul><li>python</li><li>cheat-sheet</li><li>데이터분석</li><li>#textmining</li><li>GIS</li><li>crawling</li></ul>   | 2025, 12-30 | 2025, 12-30  |
+| [[Resources/Cheat-Sheet/내가 보려고 만든 Obsidian Cheat-Sheet\|내가 보려고 만든 Obsidian Cheat-Sheet]]                                          | <ul><li>마크다운</li><li>obsidian</li><li>cheat-sheet</li></ul>                                                   | 2025, 12-30 | 2025, 12-30  |
+
+### Data Analysis Posts
+
+| Posts                                                                                                                                | Tags                                                                                                          | Created at. | Modified at. |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ----------- | ------------ |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기\|1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]] | <ul><li>데이터분석</li><li>python</li></ul>                                                                        | 2025, 12-30 | 2026, 01-05  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기\|2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기]]             | <ul><li>데이터분석</li><li>ML/DL</li></ul>                                                                         | 2026, 01-05 | 2026, 01-05  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]                         | <ul><li>데이터분석</li><li>tableau</li></ul>                                                                       | 2025, 12-30 | 2025, 12-31  |
+| [[Projects/DSJA 3기/Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기\|Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]                                         | <ul><li>데이터저널리즘</li><li>SBS데이터사이언스와저널리즘아카데미</li><li>Folium</li><li>GIS</li><li>python</li><li>데이터분석</li></ul> | 2025, 12-30 | 2025, 12-31  |
+| [[Resources/Cheat-Sheet/Python Data Analysis Cheat-Sheet\|Python Data Analysis Cheat-Sheet]]                                      | <ul><li>python</li><li>cheat-sheet</li><li>데이터분석</li><li>#textmining</li><li>GIS</li><li>crawling</li></ul>   | 2025, 12-30 | 2025, 12-30  |
+
 
 ### 추천 콘텐츠
 - [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]]

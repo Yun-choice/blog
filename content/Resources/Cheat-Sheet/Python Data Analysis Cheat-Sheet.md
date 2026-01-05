@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:46:29.778+09:00","tags":["python","cheat-sheet","데이터분석","#textmining","GIS","crawling"],"cssclasses":""}
+{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:46:29.778+09:00","published":"2025-12-30T12:54:35.214+09:00","tags":["python","cheat-sheet","데이터분석","#textmining","GIS","crawling"],"cssclasses":""}
 ---
 
 
