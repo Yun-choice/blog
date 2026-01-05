@@ -83,7 +83,7 @@ git remote add origin git@github.com:username.github.io.git
 ### 3. GIthub pages 활성화
 
 1. `quartz/.github/workflows` 경로에 메모장 파일을 새로 만듭니다.
-2. 이름을 deploy.yml로 바꾸고 아래 코드를 붙여넣습니다.
+2. 이름을 deploy.yaml로 바꾸고 아래 코드를 붙여넣습니다.
 
 ``` notepad title="Notepad-Auto-Github-Actions"
 name: Deploy Quartz site to GitHub Pages
@@ -159,7 +159,7 @@ jobs:
 
 ---
 ## 관련 게시물
-- [[Inbox/▣ Quartz 블로그에 편의 기능 추가하기]]
-- [[Inbox/▣ Quartz 블로그에 SEO와 GA4 등록하기]]
+- [[Inbox/Quartz 블로그에 편의 기능 추가하기]]
+- [[Inbox/Quartz 블로그에 SEO와 GA4 등록하기]]
 ## About me
 - [My github](https://github.com/taketech019)
