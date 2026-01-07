@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:53:57.545+09:00","tags":["마크다운","obsidian","cheat-sheet"],"cssclasses":""}
+{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:53:57.545+09:00","published":"2026-01-07T11:59:52.715+09:00","tags":["Markdown","obsidian","cheat-sheet"],"cssclasses":""}
 ---
 
 

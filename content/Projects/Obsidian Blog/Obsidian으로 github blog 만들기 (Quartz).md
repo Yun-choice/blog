@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-18T17:53:04.462+09:00","tags":["quartz","obsidian","digitalgarden","깃헙블로그","기술블로그"],"cssclasses":""}
+{"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-18T17:53:04.462+09:00","published":"2026-01-07T11:59:52.704+09:00","tags":["quartz","obsidian","digitalgarden","깃헙블로그","기술블로그"],"cssclasses":""}
 ---
 
 
