@@ -13,8 +13,8 @@
 | Posts                                                                                                                    | Tags                                      | Created at. | Modified at. |
 | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ----------- | ------------ |
 | [[Projects/세상의 모든 Tableau 차트/1. 도넛 차트\|1. 도넛 차트]]                                                                     | <ul><li>#Tableau</li><li>#데이터분석</li></ul> | 2026, 01-31 | 2026, 02-01  |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]             | <ul><li>#데이터분석</li><li>#Tableau</li></ul> | 2026, 01-07 | 2026, 01-31  |
 | [[Projects/세상의 모든 Tableau 차트/0. 시작\|0. 시작]]                                                                           | <ul><li>#Tableau</li><li>#BOAZ</li></ul>  | 2026, 01-31 | 2026, 01-31  |
+| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]             | <ul><li>#데이터분석</li><li>#Tableau</li></ul> | 2026, 01-07 | 2026, 01-31  |
 | [[Resources/Cheat-Sheet/Tableau Cheat-Sheet\|Tableau Cheat-Sheet]]                                                    | <ul><li>#Tableau</li></ul>                | 2026, 01-19 | 2026, 01-31  |
 | [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기\|2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기]] | <ul><li>#데이터분석</li><li>#ML</li></ul>      | 2026, 01-05 | 2026, 01-12  |
 
