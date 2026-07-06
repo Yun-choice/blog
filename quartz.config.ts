@@ -19,38 +19,38 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
     baseUrl: "taketech019.github.io/",            // 사이트의 기본 도메인(절대 URL 생성 기준)
-    ignorePatterns: ["private", ".obsidian", "Inbox", "Utilities", "attatchments"], // 빌드에서 제외할 경로/패턴
+    ignorePatterns: ["private", ".obsidian", "Inbox", "Utillities/templates"], // 빌드에서 제외할 경로/패턴
     defaultDateType: "modified",            // 문서 날짜 기본값(수정일 기준)
-    theme: {                                // 테마 설정
-      fontOrigin: "googleFonts",            // 폰트 로딩 소스(Google Fonts)
+    theme: {                                // 테마 설정: 미니멀 데이터 닥스 (stone + teal)
+      fontOrigin: "local",                  // 폰트 로딩 소스(quartz/styles/custom.scss에서 직접 로드)
       cdnCaching: true,                     // CDN 캐싱 사용 여부
       typography: {                         // 글꼴 패밀리 지정
-        header: "Schibsted Grotesk",        // 제목 폰트
-        body: "Source Sans Pro",            // 본문 폰트
+        header: "Pretendard Variable",      // 제목 폰트 (한글 웹폰트)
+        body: "Pretendard Variable",        // 본문 폰트 (한글 웹폰트)
         code: "IBM Plex Mono",              // 코드 블록 폰트
       },
       colors: {                             // 색상 팔레트
-        lightMode: {                         // 라이트 모드 색상 (팔레트 적용)
-          light: "#F1F2E9",                  // 가장 밝은 배경색(팔레트 3)
-          lightgray: "#D7DDCF",              // 경계/UI용 연회색(팔레트 그레이 톤을 밝힌 값)
-          gray: "#899483",                   // 기본 회색(팔레트 2, 세이지 그레이)
-          darkgray: "#4D5943",               // 진한 회색/텍스트(팔레트 5, 다크 올리브)
-          dark: "#0D0D0D",                   // 최암색(팔레트 1)
-          secondary: "#80951F",              // 포인트 보조색(팔레트 4, 올리브 라임)
-          tertiary: "#4D5943",               // 보조2 색(팔레트 5, 톤다운 포인트)
-          highlight: "rgba(128, 149, 31, 0.15)", // 하이라이트 배경(secondary RGBA)
-          textHighlight: "#80951F66",        // 텍스트 드래그/강조(secondary 40% 투명)
+        lightMode: {                         // 라이트 모드 색상 (stone 배경 + teal 포인트)
+          light: "#FAFAF9",                  // 가장 밝은 배경색(stone-50)
+          lightgray: "#E7E5E4",              // 경계/UI용 연회색(stone-200)
+          gray: "#A8A29E",                   // 기본 회색(stone-400)
+          darkgray: "#292524",               // 본문 텍스트(stone-800)
+          dark: "#1C1917",                   // 제목 등 최암색(stone-900)
+          secondary: "#0D9488",              // 포인트 보조색(teal-600, 링크/태그)
+          tertiary: "#0F766E",               // 보조2 색(teal-700, hover 등)
+          highlight: "rgba(13, 148, 136, 0.1)", // 하이라이트 배경(teal 저채도)
+          textHighlight: "#0D948866",        // 텍스트 드래그/강조(teal 40% 투명)
         },
         darkMode: {                         // 다크 모드 색상
-          light: "#161618",                 // 다크 모드의 밝은 톤
-          lightgray: "#393639",             // 밝은 회색
-          gray: "#646464",                  // 기본 회색
-          darkgray: "#d4d4d4",              // 밝은 텍스트용 회색
-          dark: "#ebebec",                  // 가장 밝은 텍스트색
-          secondary: "#80951F",             // 포인트 보조색
-          tertiary: "#84a59d",              // 보조2 색
-          highlight: "rgba(143, 159, 169, 0.15)", // 하이라이트 배경
-          textHighlight: "#b3aa0288",       // 텍스트 드래그/강조 색
+          light: "#0C0A09",                 // 가장 어두운 배경(stone-950)
+          lightgray: "#292524",             // 경계/UI용 어두운 회색(stone-800)
+          gray: "#78716C",                  // 기본 회색(stone-500)
+          darkgray: "#D6D3D1",              // 본문 텍스트(stone-300)
+          dark: "#FAFAF9",                  // 제목 등 가장 밝은 텍스트색(stone-50)
+          secondary: "#2DD4BF",             // 포인트 보조색(teal-400, 대비를 위해 밝게)
+          tertiary: "#5EEAD4",              // 보조2 색(teal-300)
+          highlight: "rgba(45, 212, 191, 0.1)", // 하이라이트 배경(teal 저채도)
+          textHighlight: "#2DD4BF66",       // 텍스트 드래그/강조 색
         },
       },
     },
@@ -69,6 +69,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
         keepBackground: false,              // 코드 배경색 제거
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }), // Obsidian 문법 지원
+      Plugin.Dataview(),                    // Obsidian Dataview TABLE 블록을 실제 글 목록으로 렌더링
       Plugin.GitHubFlavoredMarkdown(),      // GitHub Flavored Markdown 지원
       Plugin.TableOfContents(),             // 문서 내 목차 자동 생성
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }), // 내부 링크 해석 및 최단 경로화
@@ -88,10 +89,13 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
       }),
       Plugin.Assets(),                      // 정적 에셋 복사(이미지 등)
       Plugin.Static(),                      // /static 폴더 내용 복사
+      Plugin.StaticRoot(),                  // 루트 정적 파일 복사(robots.txt 등)
       Plugin.Favicon(),                     // 파비콘 처리
       Plugin.NotFoundPage(),                // 404 페이지 생성
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),              // OG 이미지 자동 생성(빌드 느려지면 주석 처리)
+      // CustomOgImages는 항상 Google Fonts에서 헤더/본문 폰트를 가져오는데
+      // Pretendard Variable은 Google Fonts에 없어 빌드가 실패함. static/og-image.png
+      // 기본 이미지로 대체(quartz/components/Head.tsx의 usesCustomOgImage 폴백).
+      // Plugin.CustomOgImages(),
     ],
   },
 }

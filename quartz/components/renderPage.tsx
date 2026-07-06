@@ -3,12 +3,28 @@ import { QuartzComponent, QuartzComponentProps } from "./types"
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
-import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import {
+  FullSlug,
+  RelativeURL,
+  joinSegments,
+  normalizeHastElement,
+  resolveRelative,
+} from "../util/path"
 import { clone } from "../util/clone"
 import { visit } from "unist-util-visit"
 import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
+import { formatDate } from "./Date"
+import {
+  DataviewField,
+  DataviewQuery,
+  DataviewRow,
+  parseDataviewQuery,
+  runDataviewQuery,
+} from "../util/dataview"
+import { DATAVIEW_BLOCK_CLASS, DATAVIEW_QUERY_ATTR } from "../plugins/transformers/dataview"
+import { styleText } from "util"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -186,6 +202,173 @@ function renderTranscludes(
   })
 }
 
+function buildDataviewCell(
+  field: DataviewField,
+  row: DataviewRow,
+  slug: FullSlug,
+  cfg: GlobalConfiguration,
+): Element {
+  switch (field.path) {
+    case "file.link":
+      return {
+        type: "element",
+        tagName: "td",
+        properties: {},
+        children: [
+          {
+            type: "element",
+            tagName: "a",
+            properties: { href: resolveRelative(slug, row.slug as FullSlug), class: ["internal"] },
+            children: [{ type: "text", value: row.title }],
+          },
+        ],
+      }
+    case "file.tags":
+      return {
+        type: "element",
+        tagName: "td",
+        properties: {},
+        children:
+          row.tags.length === 0
+            ? [{ type: "text", value: "" }]
+            : [
+                {
+                  type: "element",
+                  tagName: "ul",
+                  properties: { className: ["dataview-tags"] },
+                  children: row.tags.map((tag) => ({
+                    type: "element",
+                    tagName: "li",
+                    properties: {},
+                    children: [
+                      {
+                        type: "element",
+                        tagName: "a",
+                        properties: {
+                          href: resolveRelative(slug, `tags/${tag}` as FullSlug),
+                          class: ["internal", "tag-link"],
+                        },
+                        children: [{ type: "text", value: tag }],
+                      },
+                    ],
+                  })),
+                },
+              ],
+      }
+    case "file.cday":
+      return {
+        type: "element",
+        tagName: "td",
+        properties: {},
+        children: [{ type: "text", value: row.created ? formatDate(row.created, cfg.locale) : "" }],
+      }
+    case "file.mday":
+      return {
+        type: "element",
+        tagName: "td",
+        properties: {},
+        children: [
+          { type: "text", value: row.modified ? formatDate(row.modified, cfg.locale) : "" },
+        ],
+      }
+    default: {
+      const exhaustiveCheck: never = field.path
+      throw new Error(`Unsupported dataview field: ${exhaustiveCheck}`)
+    }
+  }
+}
+
+function buildDataviewTable(
+  query: DataviewQuery,
+  rows: DataviewRow[],
+  slug: FullSlug,
+  cfg: GlobalConfiguration,
+): Element {
+  const headerRow: Element = {
+    type: "element",
+    tagName: "tr",
+    properties: {},
+    children: query.fields.map((f) => ({
+      type: "element",
+      tagName: "th",
+      properties: {},
+      children: [{ type: "text", value: f.label }],
+    })),
+  }
+
+  const bodyRows: Element[] =
+    rows.length > 0
+      ? rows.map((row) => ({
+          type: "element",
+          tagName: "tr",
+          properties: {},
+          children: query.fields.map((f) => buildDataviewCell(f, row, slug, cfg)),
+        }))
+      : [
+          {
+            type: "element",
+            tagName: "tr",
+            properties: {},
+            children: [
+              {
+                type: "element",
+                tagName: "td",
+                properties: { colSpan: query.fields.length },
+                children: [{ type: "text", value: "표시할 글이 없습니다." }],
+              },
+            ],
+          },
+        ]
+
+  return {
+    type: "element",
+    tagName: "table",
+    properties: { className: ["dataview-table"] },
+    children: [
+      { type: "element", tagName: "thead", properties: {}, children: [headerRow] },
+      { type: "element", tagName: "tbody", properties: {}, children: bodyRows },
+    ],
+  }
+}
+
+function renderDataviewBlocks(
+  root: Root,
+  cfg: GlobalConfiguration,
+  slug: FullSlug,
+  componentData: QuartzComponentProps,
+) {
+  visit(root, "element", (node) => {
+    // mdast-util-to-hast always wraps a `code` node in `<pre>`; our transformer's
+    // hName override only replaces the inner node, so the placeholder actually
+    // shows up as `<pre><div class="dataview-block">`. Replace the `<pre>` itself.
+    if (node.tagName !== "pre") return
+    const child = node.children[0]
+    if (!child || child.type !== "element" || child.tagName !== "div") return
+
+    const classNames = (child.properties?.className ?? []) as string[]
+    if (!classNames.includes(DATAVIEW_BLOCK_CLASS)) return
+
+    const encoded = child.properties?.[DATAVIEW_QUERY_ATTR] as string | undefined
+    node.children = []
+    if (!encoded) return
+
+    const source = Buffer.from(encoded, "base64").toString("utf-8")
+    const query = parseDataviewQuery(source)
+    if (!query) {
+      console.warn(
+        styleText("yellow", `Dataview: could not parse query in \`${slug}\`, leaving block empty`),
+      )
+      return
+    }
+
+    const rows = runDataviewQuery(query, componentData.allFiles)
+    const table = buildDataviewTable(query, rows, slug, cfg)
+    node.tagName = table.tagName
+    node.properties = table.properties
+    node.children = table.children
+  })
+}
+
 export function renderPage(
   cfg: GlobalConfiguration,
   slug: FullSlug,
@@ -197,6 +380,7 @@ export function renderPage(
   // for the file cached in contentMap in build.ts
   const root = clone(componentData.tree) as Root
   renderTranscludes(root, cfg, slug, componentData)
+  renderDataviewBlocks(root, cfg, slug, componentData)
 
   // set componentData.tree to the edited html that has transclusions rendered
   componentData.tree = root

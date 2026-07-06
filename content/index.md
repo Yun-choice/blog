@@ -1,7 +1,6 @@
 ---
 {"publish":true,"title":"Welcome to TakeTech's Data Garden 🌻","created":"2025-12-15T13:05:26.684+09:00","modified":"2025-12-30T12:37:05.825+09:00","published":"2026-01-07T11:59:53.005+09:00","cssclasses":""}
 ---
-
 ## 안녕하세요
 
 데이터 분석가(가 되고싶은) 대학생 윤택한의 기술 블로그입니다!
@@ -10,25 +9,35 @@
 
 ---
 ## Recent Notes
-| Posts                                                                                                                    | Tags                                      | Created at. | Modified at. |
-| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ----------- | ------------ |
-| [[Projects/세상의 모든 Tableau 차트/1. 도넛 차트\|1. 도넛 차트]]                                                                     | <ul><li>#Tableau</li><li>#데이터분석</li></ul> | 2026, 01-31 | 2026, 02-01  |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기\|2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기]] | <ul><li>#데이터분석</li><li>#ML</li></ul>      | 2026, 01-05 | 2026, 02-01  |
-| [[Projects/세상의 모든 Tableau 차트/0. 시작\|0. 시작]]                                                                           | <ul><li>#Tableau</li><li>#BOAZ</li></ul>  | 2026, 01-31 | 2026, 01-31  |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]             | <ul><li>#데이터분석</li><li>#Tableau</li></ul> | 2026, 01-07 | 2026, 01-31  |
-| [[Resources/Cheat-Sheet/Tableau Cheat-Sheet\|Tableau Cheat-Sheet]]                                                    | <ul><li>#Tableau</li></ul>                | 2026, 01-19 | 2026, 01-31  |
+```dataview
+TABLE without ID
+file.link as "Posts",
+file.tags as "Tags",
+file.cday as "Created at.",
+file.mday as "Modified at."
 
+FROM ""
+
+WHERE publish AND length(tags)>0
+
+SORT file.mday DESC
+
+LIMIT 5
+```
 ## Data Analysis Posts
-| Posts                                                                                                                                | Tags                                                                                                                | Created at. | Modified at. |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ----------- | ------------ |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기\|2. ARIMA 모델과 Tensorflow로 매출액 예측 모델링하기]]             | <ul><li>#데이터분석</li><li>#ML</li></ul>                                                                                | 2026, 01-05 | 2026, 02-01  |
-| [[Projects/세상의 모든 Tableau 차트/1. 도넛 차트\|1. 도넛 차트]]                                                                                 | <ul><li>#Tableau</li><li>#데이터분석</li></ul>                                                                           | 2026, 01-31 | 2026, 02-01  |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/3. Tableau로 Sales KPI 대시보드 개발하기\|3. Tableau로 Sales KPI 대시보드 개발하기]]                         | <ul><li>#데이터분석</li><li>#Tableau</li></ul>                                                                           | 2026, 01-07 | 2026, 01-31  |
-| [[Resources/Notes/ARIMA 모형 이해하기\|ARIMA 모형 이해하기]]                                                                                  | <ul><li>#ML</li><li>#데이터분석</li></ul>                                                                                | 2026, 01-05 | 2026, 01-09  |
-| [[Resources/Cheat-Sheet/Python Data Analysis Cheat-Sheet\|Python Data Analysis Cheat-Sheet]]                                      | <ul><li>#python</li><li>#cheat-sheet</li><li>#데이터분석</li><li>#textmining</li><li>#GIS</li><li>#crawling</li></ul>    | 2026, 01-07 | 2026, 01-07  |
-| [[Projects/DSJA 3기/Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기\|Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기]]                                         | <ul><li>#데이터저널리즘</li><li>#SBS데이터사이언스와저널리즘아카데미</li><li>#Folium</li><li>#GIS</li><li>#python</li><li>#데이터분석</li></ul> | 2026, 01-07 | 2026, 01-07  |
-| [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기\|1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]] | <ul><li>#데이터분석</li><li>#python</li></ul>                                                                            | 2026, 01-07 | 2026, 01-07  |
+```dataview
+TABLE without ID
+file.link as "Posts",
+file.tags as "Tags",
+file.cday as "Created at.",
+file.mday as "Modified at."
 
+FROM #데이터분석 OR #ML/DL 
+
+WHERE publish AND length(tags)>0
+
+SORT file.mday DESC
+```
 ---
 ### 추천 콘텐츠
 - [[Projects/신발회사 Sale 데이터로 캡스톤 디자인 진행하기/1. Design Thinking으로 과제 정의하고 Sales 데이터 분석하기]]

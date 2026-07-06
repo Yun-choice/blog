@@ -1,3 +1,108 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Fonts: theme.fontOrigin is "local" (quartz.config.ts), so Quartz's Google
+// Fonts loader is skipped. The Pretendard/IBM Plex Mono stylesheets are
+// loaded via <link> tags in quartz/components/Head.tsx instead of a CSS
+// @import here, since @import must precede every other rule in the
+// compiled output and Sass requires @use to come first in the source.
+
+/* ------------------------------------------------------------------ */
+/* Minimal Data Docs — typography                                      */
+/* ------------------------------------------------------------------ */
+body {
+  line-height: 1.75; // Korean body copy reads more comfortably with extra leading
+}
+
+article {
+  p,
+  li {
+    line-height: 1.75;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Callouts — soften into a card rather than a flat outlined box        */
+/* ------------------------------------------------------------------ */
+.callout {
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ------------------------------------------------------------------ */
+/* Code blocks                                                         */
+/* ------------------------------------------------------------------ */
+pre {
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+code {
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Dataview-rendered tables (quartz/util/dataview.ts + renderPage.tsx)  */
+/* ------------------------------------------------------------------ */
+.dataview-table {
+  width: 100%;
+
+  th {
+    font-family: var(--headerFont);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  td {
+    vertical-align: top;
+  }
+
+  tr:hover {
+    background-color: var(--highlight);
+  }
+}
+
+.dataview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    line-height: 1;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar dividers — give the layout a docs-shell structure            */
+/* ------------------------------------------------------------------ */
+.sidebar.left {
+  border-right: 1px solid var(--lightgray);
+}
+
+.sidebar.right {
+  border-left: 1px solid var(--lightgray);
+}
+
+@media all and (max-width: 800px) {
+  .sidebar.left,
+  .sidebar.right {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--lightgray);
+  }
+}
