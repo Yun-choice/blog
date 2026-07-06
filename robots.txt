@@ -1,2 +1,4 @@
 User-agent: *
-Allow:/
+Allow: /
+
+Sitemap: https://taketech019.github.io/sitemap.xml

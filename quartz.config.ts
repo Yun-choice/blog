@@ -19,7 +19,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
     },
     locale: "ko-KR",                        // 기본 로케일(날짜/서식 등에 사용)
     baseUrl: "taketech019.github.io/",            // 사이트의 기본 도메인(절대 URL 생성 기준)
-    ignorePatterns: ["private", ".obsidian", "Inbox", "Utilities", "attatchments"], // 빌드에서 제외할 경로/패턴
+    ignorePatterns: ["private", ".obsidian", "Inbox", "Utillities/templates"], // 빌드에서 제외할 경로/패턴
     defaultDateType: "modified",            // 문서 날짜 기본값(수정일 기준)
     theme: {                                // 테마 설정
       fontOrigin: "googleFonts",            // 폰트 로딩 소스(Google Fonts)
@@ -69,6 +69,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
         keepBackground: false,              // 코드 배경색 제거
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }), // Obsidian 문법 지원
+      Plugin.Dataview(),                    // Obsidian Dataview TABLE 블록을 실제 글 목록으로 렌더링
       Plugin.GitHubFlavoredMarkdown(),      // GitHub Flavored Markdown 지원
       Plugin.TableOfContents(),             // 문서 내 목차 자동 생성
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }), // 내부 링크 해석 및 최단 경로화
@@ -88,6 +89,7 @@ const config: QuartzConfig = {              // Quartz 설정 객체 선언
       }),
       Plugin.Assets(),                      // 정적 에셋 복사(이미지 등)
       Plugin.Static(),                      // /static 폴더 내용 복사
+      Plugin.StaticRoot(),                  // 루트 정적 파일 복사(robots.txt 등)
       Plugin.Favicon(),                     // 파비콘 처리
       Plugin.NotFoundPage(),                // 404 페이지 생성
       // Comment out CustomOgImages to speed up build time
