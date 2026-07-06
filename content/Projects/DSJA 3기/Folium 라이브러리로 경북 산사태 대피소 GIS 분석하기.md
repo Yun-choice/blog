@@ -2,7 +2,6 @@
 {"publish":true,"created":"2025-12-15T13:05:26.700+09:00","modified":"2025-12-30T10:56:20.491+09:00","tags":["데이터저널리즘","SBS데이터사이언스와저널리즘아카데미","Folium","GIS","python","데이터분석"],"cssclasses":""}
 ---
 
-
 >[!info] Overview
 >경상북도 산사태 취약지역과 대피소 데이터를 수집·정제·시각화해, 대피소 부족·거리 문제·위치 부적절성 등 구조적 문제를 분석한 프로젝트입니다. 
 >
@@ -34,7 +33,7 @@
 ### 2025 경상북도 산사태 취약지역 지정현황
 - *출처 : [공공데이터 포털](https://www.data.go.kr/data/15126579/fileData.do?recommendDataYn=Y)*
 
-![[Utillities/attatchments/Pasted image 20250910120805.png|500]]
+![[Pasted image 20250910120805.png|500]]
 6275 rows x 15 columns
 
 산사태 취약지역의 위치정보, 유형, 지정면적 데이터가 보입니다.
@@ -76,7 +75,7 @@ for idx, row in df_2025.iterrows():
 ### 경상북도 산사태 대피소 지정현황
 - *출처 : [산림청 산사태정보시스템](https://sansatai.forest.go.kr/) 크롤링*
 
-![[Utillities/attatchments/Pasted image 20250910145606.png|550]]
+![[Pasted image 20250910145606.png|550]]
 - 2239 rows x 7 columns *[코드 보러가기](https://github.com/taketech019/dsja-shelter-map/blob/main/notebook/CR_%EC%82%B0%EC%82%AC%ED%83%9C%EC%B7%A8%EC%95%BD%EC%A7%80%EC%97%AD_%EB%8C%80%ED%94%BC%EC%86%8C_%EC%B5%9C%EC%A2%85.ipynb)*
 
 경상북도 산사태 대피소의 고유 id, 지번주소, 위경도 데이터 등이 들어있습니다.
@@ -95,23 +94,23 @@ for idx, row in df_2025.iterrows():
 
 #### 1. 대피소 부족
 
-![[Utillities/attatchments/Pasted image 20250915215157.png|500]]
+![[Pasted image 20250915215157.png|500]]
 
 경북지역 산사태 취약지역은 총 6275개, 대피소는 2239개소로 약 35% 비율입니다.
 
 시군구 단위로 본다면 상당수가 40% 이하로, 전반적 대피소 부족 현상을 보이고 있습니다.
 
-![[Utillities/attatchments/Pasted image 20250915215734.png|400]]
+![[Pasted image 20250915215734.png|400]]
 읍면동 단위로 분석한 결과, 극단적으로 대피소가 부족한 몇몇 지역을 확인할 수 있었습니다.
 
 #### 2. 너무 먼 대피소
 
 harversine 라이브러리로 산사태 취약지역으로부터 가장 가까운 대피소까지의 직선거리를 구해보았습니다.
 
-![[Utillities/attatchments/Pasted image 20250915220332.png|500]]
+![[Pasted image 20250915220332.png|500]]
 거리 평균 약 1.4km, 중위값 약 1.2km였으며, **6km 이상 떨어진 대피소**도 존재했습니다.
 
-![[Utillities/attatchments/Pasted image 20250915220859.png|500]]
+![[Pasted image 20250915220859.png|500]]
 
 이를 대한민국 노인 보행속도 평균 1.06m/s로 소요시간 환산 결과,
 
@@ -119,7 +118,7 @@ harversine 라이브러리로 산사태 취약지역으로부터 가장 가까�
 
 #### 3. 너무 가까운 대피소
 
-![[Utillities/attatchments/Pasted image 20250915221408.png]]
+![[Pasted image 20250915221408.png]]
 
 반대로 산사태 취약지역과 대피소가 맞붙어있는 경우도 있었습니다.
 
@@ -142,20 +141,20 @@ harversine 라이브러리로 산사태 취약지역으로부터 가장 가까�
 ### 경상북도 청송군 위험지도.tif
 
 - *출처 : [산림공간정보서비스](https://map.forest.go.kr/forest/?systype=mapSearch&searchOption=landslide&longitude=14180192.1832882&latitude=4350576.8953995&scale=6)*
-![[Utillities/attatchments/Pasted image 20250915232402.png|500]]
+![[Pasted image 20250915232402.png|500]]
 
 산사태 위험등급 1-5단계 값이 매핑되어있는 tif파일 입니다.
 rasterio 라이브러리를 활용하여 핸들링했습니다.
 
 ### 청송군 노인 복지시설 현황
 - *출처 : [공공데이터포털](https://www.data.go.kr/data/15095490/fileData.do)*
-![[Utillities/attatchments/Pasted image 20250915233140.png|500]]
+![[Pasted image 20250915233140.png|500]]
 8045 rows × 5 columns
 
 이중 청송군 소재 복지센터 및 경로당 232곳을 후보지로 하였고
 
 googlemaps 라이브러리를 활용하여 '소재지' column을 위경도 좌표로 변환하였습니다.
-*(자세한 방법은 [[Projects/DSJA 3기/Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기#^googlemaps-api\|api활용코드]]를 확인하세요)*
+*(자세한 방법은 [[Folium 라이브러리로 경북 산사태 대피소 GIS 분석하기#^googlemaps-api\|api활용코드]]를 확인하세요)*
 
 ### 재배치 결과
 

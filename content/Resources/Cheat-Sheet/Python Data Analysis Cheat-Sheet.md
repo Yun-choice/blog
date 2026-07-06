@@ -2,7 +2,6 @@
 {"publish":true,"created":"2025-12-15T13:05:26.748+09:00","modified":"2025-12-30T10:46:29.778+09:00","tags":["python","cheat-sheet","데이터분석","#textmining","GIS","crawling"],"cssclasses":""}
 ---
 
-
 >[!info] Overview
 >Python 환경에서 데이터 분석을 위해 사용할 수 있는 다양한 코드블럭을 모아두었다.
 >
@@ -174,11 +173,11 @@ def gcp_rev_geocoding(lat, lon):
 ### 3) kakao map api
 
 ```python
-import request
+import requests
 
 # kakao api 호출
 url = "https://dapi.kakao.com/v2/local/search/address.json" #요청할 url 주소
-Key = 'your_rest_api_key' #REST API 키(유효한 키)
+key = 'your_rest_api_key' #REST API 키(유효한 키)
 headers = {"Authorization": f"KakaoAK {key}"} 
 addr = '서울특별시 종로구 청와대로 1'
 
@@ -189,6 +188,22 @@ region_1depth = result['documents'][0]['address']['region_1depth_name']
 region_2depth = result['documents'][0]['address']['region_2depth_name']
 lon = result['documents'][0]['address']['x']
 lat = result['documents'][0]['address']['y']
+```
+
+```python
+# 함수화
+def udf_geocoding(addr):
+    result = requests.get(url, headers=headers,
+                          params = {'query': addr}).json()
+    
+    region_1depth = result['documents'][0]['address']['region_1depth_name']
+    region_2depth = result['documents'][0]['address']['region_2depth_name']
+    lon = result['documents'][0]['address']['x']
+    lat = result['documents'][0]['address']['y']
+
+    return pd.Series([region_1depth, region_2depth, lon, lat])
+
+df[[region_1depth, region_2depth, lon, lat]] = df['address'].apply(udf_geocoding)
 ```
 
 # III. Data Analysis
